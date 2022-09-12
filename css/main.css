@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+    --border-radius: 10px;
+}
+body {
+    font-size: 15px;
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--Very-light-gray);
+}
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin: 50px auto;
+    max-width: 900px;
+    border-radius: var(--border-radius);
+}
+.orange,
+.blue,
+.green {
+    padding: 45px;
+}
+.orange {
+    background-color: var(--Bright-orange);
+    border-top-left-radius: var(--border-radius);;
+    border-bottom-left-radius: var(--border-radius);;
+}
+.blue {
+    background-color: var(--Dark-cyan);
+}
+.green {
+    background-color: var(--Very-dark-cyan);
+    border-bottom-right-radius: var(--border-radius);;
+    border-top-right-radius: var(--border-radius);;
+}
+@media (max-width:900px) {
+    .main {
+        border-radius: 0;
+    }
+    .orange {
+        border-radius: 0;
+    }
+    .green {
+        border-radius: 0;
+    }
+}
+.orange p:first-of-type,
+.blue p:first-of-type,
+.green p:first-of-type {
+    font-size: 40px;
+    color: var(--Very-light-gray);
+    font-weight: 700;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    margin: 30px auto;
+}
+.orange p:last-of-type,
+.blue p:last-of-type,
+.green p:last-of-type {
+    color: var(--Transparent-white);
+    line-height: 2;
+    margin-bottom: 60px;
+}
+.orange button,
+.blue button,
+.green button {
+    background: white;
+    border: none;
+    border-radius: 30px;
+    width: 130px;
+    height: 45px;
+    font-weight: bold;
+}
+.orange button:hover,
+.blue button:hover,
+.green button:hover {
+    background-color: transparent;
+    border: 2px white solid;
+    color: white;
+
+}
+
+.orange button{
+    color: var(--Bright-orange);
+}
+.blue button{
+    color: var(--Dark-cyan);
+}
+.green button {
+    color: var(--Very-dark-cyan);
+}
